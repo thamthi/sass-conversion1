@@ -1,0 +1,90 @@
+.bg-header{
+    background-color: $white-color;
+    background-color:$light-blue;
+    color: $dark-grey;
+    border-bottom:1rem solid $med-blue;
+    border-top:1rem solid $dark-blue;
+    position: relative;
+    
+    &:before,
+    &:after{
+        content:"";
+        position:absolute;
+        bottom:-1rem;
+        width:30%;
+        height:1rem;
+        background-color: $dark-blue;
+    }
+    &:before{
+        left:0;
+    }
+    
+    &:after {
+        right:0;
+    }
+    @extend .clearfix:after;
+}
+
+
+header {
+    width: 400px; /* default */
+    margin: 0 auto;
+    position: relative;
+    
+    h1{
+        width: 100%;
+        padding: 0 2rem;
+        color: $dark-brown;
+        letter-spacing: 0.1rem;
+    }
+    
+    h1 i.fa-lg{
+        display:block;
+        width: 25%;
+        float:left;
+        font-size: 7rem;
+        line-height: 12.7936rem;
+        color: $light-brown;
+    }
+    
+    h1 i.fa-lg ~ span{
+        float: right;
+        width: 75%;
+        font-size: 3.998rem;
+        /**
+        2 lines of 3.998 * 1.6 = 12.7936
+        **/
+        padding-left: 1rem;
+        text-align: right;
+    }
+    
+    nav{
+        width: 100%;
+        padding:2rem 0;
+        clear: both;
+    }
+    
+    nav>ul li{
+        width:100%;
+        float: none;
+    }
+    
+    nav>ul>li>a{
+        display:block;
+        text-align: center;
+        text-decoration: none;
+        color: $dark-grey;    
+        font-size: $font-size-small;
+        letter-spacing: 0.25rem;
+        border:1px solid $light-grey; 
+        border-bottom: none;
+        padding:1.0rem 2rem;
+        line-height: 1;
+        background-color: $white-color;
+    }
+    
+    nav>ul>li>a:hover{
+        font-weight: 700;
+        color:$dark-brown;
+    }
+}

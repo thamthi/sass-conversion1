@@ -1,0 +1,51 @@
+// Calculates the width of column:
+// $n -> number of columns
+// $w -> total width including all columns and spacings in the row
+// $s -> spacing (gaps between columns)
+@mixin esp($n, $w, $s){
+    // width of individual column
+    width: ($w - $s*($n - 1))/$n;
+
+    margin: 0 0 0 $s;
+    
+    // first column will have margin left 0
+    &:first-child {
+        margin: 0;
+    }
+}
+
+@mixin tablet {
+    @media all and (min-width:$breakpoint-mobile-low) and (max-width:$breakpoint-mobile-high) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media all and (min-width:$breakpoint-small) and (max-width: $breakpoint-medium) {
+        @content;
+    }
+}
+
+@mixin wide-desktop {
+    @media all and (min-width:$breakpoint-large) {
+        @content;
+    }
+}
+
+
+@mixin header-nav($line-height, $border,$border-left,$bckgrnd-color){
+    line-height: $line-height;
+    border: $border;
+    border-left: $border-left;
+    background-color: $bckgrnd-color;
+}
+
+
+@mixin header-h1($display, $vertical-align, $float,$font-size, $line-height){
+    display: $display;
+    vertical-align: $vertical-align;
+    float: $float;
+    font-size: $font-size;
+    line-height: $line-height;
+}
+

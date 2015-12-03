@@ -1,0 +1,29 @@
+.bg-content2{
+    background-color: $light-blue;
+    color: $dark-blue;
+    @extend .clearfix:after;
+}
+
+.content2{
+    h3,h4{
+        font-size: $font-size-medium;
+    }
+    h3{
+        padding: 1rem 2rem 0.5rem;
+    }
+
+    h4{
+        padding: 1rem 2rem 0rem;
+    }
+
+    p,li{
+        font-size: $font-size-small;
+    }
+    p{
+        padding: 0.5rem 2rem 1rem;
+    }
+
+    li{
+        padding: 0.5rem 2rem;
+    }
+}

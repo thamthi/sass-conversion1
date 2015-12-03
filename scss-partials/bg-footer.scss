@@ -1,0 +1,40 @@
+.bg-footer{
+    background-color: $white-color;
+    color: $light-grey; 
+    @extend .clearfix:after;
+}
+
+
+footer{
+    padding:2rem 0;
+
+    .col-2:first-child{
+        border-left: 0;
+    }
+    
+    h4,p{
+        padding: 0.5rem 2rem;
+    }
+    h4{
+        font-size: $font-size-small;
+        color: $dark-brown;
+    }
+    
+    p{
+        font-size: $font-size_xsmall;
+    }
+
+    .fa-circle,p{
+        color: $dark-grey;
+    }
+
+    h4[lang=de]{
+        display:block;
+    }
+    
+    h4[lang=en],
+    h4[lang=ar],
+    h4[lang=ru]{
+        display:none;
+    }
+}

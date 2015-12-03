@@ -1,0 +1,24 @@
+.bg-content1 {
+    background-color: $white-color;
+    color: $dark-grey;
+    @extend .clearfix:after;
+}
+
+.content1{
+    p{
+        font-size: $font-size-small;
+        padding: 0.5rem 2rem 2rem;
+    }
+    
+    h3{
+        font-size:$font-size-medium;
+        padding: 0.2rem 2rem 2rem;
+        
+        i{
+            vertical-align:middle;
+            padding-right: 2rem;
+        }
+    }
+}
+
+
